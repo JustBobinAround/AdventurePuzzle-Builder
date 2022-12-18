@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="justbobinaround.adventure_builder.StoryEditorForm">
+    <MenuBar fx:id="menu">
+        <Menu mnemonicParsing="false" text="File">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#onExportJSONAction" text="Export as JSON" />
+                <MenuItem mnemonicParsing="false" onAction="#onSaveAction" text="Save" />
+                <MenuItem fx:id="exportButton" mnemonicParsing="false" onAction="#onLoadAction" text="Open" />
+            </items>
+        </Menu>
+    </MenuBar>
+<HBox spacing="5.0" VBox.vgrow="ALWAYS">
+    <VBox HBox.hgrow="ALWAYS">
+        <Label text="Outcomes">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TableView fx:id="outcomesTable" onMouseClicked="#onOutcomeSelectionAction" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" spacing="5.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+            <HBox alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onEditStoryInfoAction" text="Story Background" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#onAddOutcomeAction" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onEditOutcomeAction" text="Edit" />
+            <Button mnemonicParsing="false" text="Delete" />
+        </HBox>
+    </VBox>
+    <VBox HBox.hgrow="ALWAYS">
+        <Label text="Choices">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TableView fx:id="choicesTable" onMouseClicked="#onChoiceSelectionAction" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" spacing="5.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#onAddChoiceAction" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onEditChoiceAction" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#onDeleteChoiceAction" text="Delete" />
+        </HBox>
+    </VBox>
+      <VBox.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </VBox.margin>
+</HBox>
+</VBox>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600" prefWidth="800.0" spacing="5.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="justbobinaround.adventure_builder.AddOutcomeForm">
+   <children>
+      <Label text="Outcome Editor">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="infoArea" promptText="Add story outcome information here..." VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER_RIGHT" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAddOutcomeAction" text="Save" />
+            <Button mnemonicParsing="false" onAction="#onCancelAction" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
